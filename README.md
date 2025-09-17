@@ -1,53 +1,83 @@
-Features
-Chatbot: Conversational AI powered by OpenAI's GPT models.
-Web Interface: Built using Flask to interact with the bot via a browser.
-OpenAI Integration: Utilizes the latest OpenAI API for chat completions.
-Docker Support: Ready for containerization with a Dockerfile and docker-compose setup.
-Easy Setup: Uses Python's built-in virtual environment.
-Prerequisites
-Python 3.7+
-OpenAI API key. You can get it here.
-Installation
-Clone the Repository:
 
-git clone https://github.com/datumbrain/openai-flask-starter.git
-cd openai-flask-starter
-Set Up Virtual Environment:
+## Features
 
-Create a virtual environment and activate it:
+- **Chatbot**: Conversational AI powered by OpenAI's GPT models.
+- **Web Interface**: Built using Flask to interact with the bot via a browser.
+- **OpenAI Integration**: Utilizes the latest OpenAI API for chat completions.
+- **Docker Support**: Ready for containerization with a `Dockerfile` and `docker-compose` setup.
+- **Easy Setup**: Uses Python's built-in virtual environment.
 
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install Dependencies:
+## Prerequisites
 
-Install the required packages using requirements.txt:
+- Python 3.7+
+- OpenAI API key. You can get it [here](https://beta.openai.com/signup/).
 
-pip install -r requirements.txt
-Set Up Your OpenAI API Key:
+## Installation
 
-Add your OpenAI API key in .env.sample and rename the file to .env:
+1. **Clone the Repository**:
 
-OPENAI_API_KEY=your-api-key-here
-HTTP_PORT=5899    # change it as you like
-Run the Flask Application:
+   ```bash
+   git clone https://github.com/datumbrain/openai-flask-starter.git
+   cd openai-flask-starter
+   ```
 
-Start the Flask app by running:
+2. **Set Up Virtual Environment**:
 
-python main.py
-The app will be available at http://127.0.0.1:5899/.
+   Create a virtual environment and activate it:
 
-Docker Setup (Optional)
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. **Install Dependencies**:
+
+   Install the required packages using `requirements.txt`:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set Up Your OpenAI API Key**:
+
+   Add your OpenAI API key in `.env.sample` and rename the file to `.env`:
+
+   ```bash
+   OPENAI_API_KEY=your-api-key-here
+   HTTP_PORT=5899    # change it as you like
+   ```
+
+5. **Run the Flask Application**:
+
+   Start the Flask app by running:
+
+   ```bash
+   python main.py
+   ```
+
+   The app will be available at `http://127.0.0.1:5899/`.
+
+## Docker Setup (Optional)
+
 You can run the project in a Docker container using the following steps:
 
-Build the Docker Image:
+1. **Build the Docker Image**:
 
-docker-compose build
-Run the Application:
+   ```bash
+   docker-compose build
+   ```
 
-docker-compose up
-The app will be available at http://127.0.0.1:5899/.
+2. **Run the Application**:
 
-Project Structure
+   ```bash
+   docker-compose up
+   ```
+
+   The app will be available at `http://127.0.0.1:5899/`.
+
+## Project Structure
+
+```raw
 .
 ├── .dockerignore           # Files to ignore in Docker context
 ├── .env.sample             # Environment variable example file
@@ -62,8 +92,8 @@ Project Structure
     ├── index.html          # Frontend HTML for interacting with the chatbot
     └── styles/
         └── custom.css      # custom CSS styling
-Usage
-Once the app is running, open your browser and go to http://127.0.0.1:5899/. Type a message in the input box, and the chatbot will respond using the GPT-4 model.
+```
 
-License
-This project is licensed under the MIT License.
+## Usage
+
+Once the app is running, open your browser and go to `http://127.0.0.1:5899/`. Type a message in the input box, and the chatbot will respond using the GPT-4 model.
